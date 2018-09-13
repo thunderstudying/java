@@ -1,0 +1,27 @@
+class  FirstApp
+{
+	public static final int count=100;//想数几次就改为几
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+		for(int i=count;i>0;i--)
+		{
+			System.out.printf("%d bottles of beer on the wall,%d bottles of beer\n",i,i);
+			System.out.printf("Take one down\n");
+			System.out.printf("Pass it around\n");
+			if(i==2)//i为2时剩下一个瓶子，要用单数
+				{
+				System.out.printf("%d bottle of beer on the wall\n\n",i-1);
+				System.out.printf("%d bottle of beer on the wall,%d bottle of beer\n",i-1,i-1);
+				System.out.printf("Take one down\n");
+				System.out.printf("Pass it around\n");
+				System.out.printf("%d bottle of beer on the wall\n",i-2);
+				System.out.printf("No more bottles of beer on the wall\n\n");
+				break;
+				}
+			else
+				System.out.printf("%d bottles of beer on the wall\n\n",i-1);
+		}
+
+	}
+}
