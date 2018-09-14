@@ -1,6 +1,6 @@
 class  FirstApp
 {
-	public static final int count=100;//想数几次就改为几
+	public static final int count=99;//想从几开始数到0就改为几
 	public static void main(String[] args) 
 	{
 		System.out.println("Hello World!");
