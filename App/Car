@@ -32,7 +32,7 @@ class Car
 	{
 		System.out.println("Hello World!");
 		Scanner sc=new Scanner(System.in);
-		Car[]c=new Car[2];
+		Car[]c=new Car[2];//要输入几个对象就改为几
 		for(int i=0;i<c.length;i++)//输入汽车初始属性
 		{
 			String[]n=new String[c.length];
