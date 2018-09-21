@@ -1,0 +1,58 @@
+import java.util.Scanner;
+/**
+@author wq
+@date Sept 21,2018
+*/
+class Car 
+{
+	public String name;//名字
+	public float tank;//油箱的油量
+	public float oilConsumption;//车的油耗
+	public void gas(float addTank)//加油
+		{
+			tank=tank+addTank;
+		}
+	public boolean run()//是否能开
+		{
+			if(tank<=0)
+				{
+					System.out.println("车无油量");
+					return false;
+				}
+			else return true;
+		}
+	public Car(){System.out.println("Default");}
+	public Car(String name,int tank,float oilConsumption)
+		{
+			this.name=name;
+			this.tank=tank;
+			this.oilConsumption=oilConsumption;
+		}
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+		Scanner sc=new Scanner(System.in);
+		Car[]c=new Car[2];
+		for(int i=0;i<c.length;i++)//输入汽车初始属性
+		{
+			String[]n=new String[c.length];
+			System.out.println("请输入汽车名字:");
+			n[i]=sc.next();
+      //n[i]=sc.nextLine();//若要用nextLine就要将此处与下方sc.nextLine()注释解除并注释n[i]=sc.next()
+			int []t=new int[c.length];
+			System.out.println("请输入汽车油箱:");
+			t[i]=sc.nextInt();
+			float []o=new float[c.length];
+			System.out.println("请输入汽车油耗:");
+			o[i]=sc.nextFloat();
+			//sc.nextLine();
+			Car car=new Car(n[i],t[i],o[i]);
+			c[i]=car;
+		}
+		for(int i=0;i<c.length;i++)//输出汽车初始值
+		{
+			Car car=c[i];
+			System.out.println("汽车名字:"+car.name+"\t汽车油箱"+car.tank+"\t汽车油耗"+car.oilConsumption);
+		}
+	}
+}
