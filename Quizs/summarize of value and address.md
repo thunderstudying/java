@@ -10,10 +10,11 @@
 
   Java中的hashCode方法就是根据一定的规则将与对象相关的信息（比如对象的存储地址,对象的字段等）映射成一个数值,这个数值称作为散列值.
 
-  [Ljava.lang.String;@f0c85e是一种对函数返回值和参数的编码。这种编码叫做JNI字段描述符（JavaNative Interface FieldDescriptors).
-  [Ljava.lang.String;@f0c85e
-  "[" 表示一维数组 
-  "[["表示二维数组 
-  "L"表示一个对象 
-  "java.lang.String"表示对象的类型 
-  "@"后面表示该对象的HashCode
+  
+    [Ljava.lang.String;@f0c85e是一种对函数返回值和参数的编码。这种编码叫做JNI字段描述符（JavaNative Interface FieldDescriptors).
+    [Ljava.lang.String;@f0c85e
+    "[" 表示一维数组 
+    "[["表示二维数组 
+    "L"表示一个对象 
+    "java.lang.String"表示对象的类型 
+    "@"后面表示该对象的HashCode
