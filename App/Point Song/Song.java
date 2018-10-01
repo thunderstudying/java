@@ -17,9 +17,9 @@ public class Song {
 	public String toString()//重写Song类对象的toString()函数，以便在listSong中打印歌曲信息
 	{
 		StringBuffer s = new StringBuffer(""); 
-		s.append("歌曲名"+ this.songName); 
-		s.append("歌手"+ this.singer); 
-		s.append("歌曲时长"+ this.time); 
+		s.append("歌曲名"+ this.songName+"\n"); 
+		s.append("歌手"+ this.singer+"\n"); 
+		s.append("歌曲时长"+ this.time+"\n"); 
 		return s.toString();//返回重写后的字符串
 	}	
 }
