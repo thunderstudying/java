@@ -1,4 +1,4 @@
-class  FirstApp
+class  CoutBeer
 {
 	public static final int count=99;//想从几开始数到0就改为几
 	public static void main(String[] args) 
