@@ -21,8 +21,9 @@ class Car
 				}
 			else return true;
 		}
-	public Car(){System.out.println("Default");}
-	public Car(String name,int tank,float oilConsumption)
+	public Car()//无参构造函数，类里有有参构造函数时，系统不会自动生成无参构造函数，最好写上无参构造函数。
+	{System.out.println("Default");}
+	public Car(String name,int tank,float oilConsumption)//有参构造函数
 		{
 			this.name=name;
 			this.tank=tank;
@@ -38,7 +39,7 @@ class Car
 			String[]n=new String[c.length];
 			System.out.println("请输入汽车名字:");
 			n[i]=sc.next();
-      //n[i]=sc.nextLine();//若要用nextLine就要将此处与下方sc.nextLine()注释解除并注释n[i]=sc.next()
+      			//n[i]=sc.nextLine();//若要用nextLine就要将此处与下方sc.nextLine()注释解除并注释n[i]=sc.next()
 			int []t=new int[c.length];
 			System.out.println("请输入汽车油箱:");
 			t[i]=sc.nextInt();
