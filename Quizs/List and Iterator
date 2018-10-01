@@ -1,0 +1,36 @@
+package com.List;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+/**
+ * 
+ * @author wq
+ * @date october 1,2018
+ */
+public class ListTest {
+	public static void main(String[] args)
+	{
+		List<Integer>list=new ArrayList<>();
+		@SuppressWarnings("deprecation")
+		Integer integer =new Integer(10);//The constructor Integer(int) is deprecated since version 9
+		list.add(integer);
+		System.out.println(list.toString());
+		integer=5;
+		System.out.println(list.get(0));//改变integer的值，不改变已存入list中的值
+		
+		Integer integer1=list.get(0);
+		integer1=3;
+		list.add(integer1);
+		System.out.println(list.get(0));
+		System.out.println(list.get(1));
+		
+		list.add(0,integer);//在0位置加入integer
+		System.out.println(list.toString());
+		
+		Iterator<Integer> iter=list.iterator();//迭代器遍历list
+		while(iter.hasNext())
+		{
+			System.out.println(iter.next());
+		}
+	}
+}
