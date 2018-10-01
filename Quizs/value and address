@@ -1,4 +1,7 @@
 class  Quiz
+/**
+@author wq
+*/
 {
 	public static void main(String[] args) 
 	{
