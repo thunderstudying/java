@@ -1,0 +1,91 @@
+package com.wq;
+import java.util.Set;
+import java.util.LinkedHashSet;
+import java.util.HashSet;
+import java.util.TreeSet;
+/**
+ * 
+ * @author wq
+ * @date October 3,2018
+ */
+public class SetTest 
+{
+	/**
+	 * COUNT1,COUNT2,COUNT3运算规模数
+	 * COUNT控制插入,查找,删除的次数
+	 * beforeTime,afterTime分别为运算前后的时间，相减即为运算所用时间
+	 */
+	private final static int COUNT1=10000;
+	private final static int COUNT2=100000;
+	private final static int COUNT3=10000000;	
+	private static int COUNT=COUNT3;
+	private long beforeTime,afterTime;
+	public static void main(String[] args)
+	{	
+		LinkedHashSet <Integer>set=new LinkedHashSet<Integer>();
+		HashSet<Integer> set1=new HashSet<Integer>();
+		TreeSet<Integer> set2=new TreeSet<Integer>();		
+		/*Set<Integer> set=new LinkedHashSet<>();
+		Set<Integer> set1=new HashSet<>();
+		Set<Integer> set2=new TreeSet<>();*/
+		SetTest test1=new SetTest();
+		test1.insert(set);
+		test1.insert(set1);
+		test1.insert(set2);
+		test1.index(set);
+		test1.index(set1);
+		test1.index(set2);
+		test1.delete(set);
+		test1.delete(set1);
+		test1.delete(set2);		
+	}
+	/** 
+	 * @param set 容器变量
+	 * @return 容器名
+	 */
+	private String getName(Set<Integer> set)
+	{
+		if(set instanceof LinkedHashSet)
+			return "LinkedHashSet";
+		else if(set instanceof HashSet)
+			return "HshSet";
+		else	
+			return "TreeSet";
+	}
+	/** 
+	 * @param set 容器变量
+	 * 计算插入元素所用时间
+	 */
+	private void insert(Set<Integer> set)//插入元素
+	{
+		beforeTime=System.currentTimeMillis();			
+		for(Integer i=0;i<COUNT;i++)
+			set.add(i);//插入元素
+		afterTime=System.currentTimeMillis();		
+		System.out.println(getName(set)+"插入时间"+(afterTime-beforeTime)+"毫秒");
+	}
+	/** 
+	 * @param set 容器变量
+	 * 计算容器长度所用时间
+	 */
+	private void index(Set<Integer> set)//集合长度
+	{
+		beforeTime=System.currentTimeMillis();	
+		for(int i=0;i<COUNT;i++)
+			set.size();//计算集合长度
+		afterTime=System.currentTimeMillis();
+		System.out.println(getName(set)+"查找时间"+(afterTime-beforeTime)+"毫秒");
+	}
+	/** 
+	 * @param set 容器变量
+	 * 计算删除元素所用时间
+	 */
+	private void delete(Set<Integer> set)//删除元素
+	{
+		beforeTime=System.currentTimeMillis();
+		for(int i=0;i<COUNT;i++)
+			set.remove(0);//从头删除元素
+		afterTime=System.currentTimeMillis();		
+		System.out.println(getName(set)+"删除时间"+(afterTime-beforeTime)+"毫秒");
+	}
+}
