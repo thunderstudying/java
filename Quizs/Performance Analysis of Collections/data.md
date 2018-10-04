@@ -3,3 +3,5 @@
 ![image](https://github.com/thunderstudying/java/blob/master/pictures/LinkedList.png "LinkedList测试数据")
 ![image](https://github.com/thunderstudying/java/blob/master/pictures/Stack.png "Stack测试数据")
 ![image](https://github.com/thunderstudying/java/blob/master/pictures/Vaector.png "Vector测试数据")
+
+![image](https://github.com/thunderstudying/java/blob/master/pictures/Collections.jpg "集合框架图")
