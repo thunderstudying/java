@@ -1,0 +1,101 @@
+package com.wq;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Vector;
+import java.util.Stack;
+import java.util.List;
+/**
+ * 
+ * @author wq
+ * @date October 2,2018
+ */
+public class Test 
+{
+
+	/**
+	 * COUNT1,COUNT2,COUNT3运算规模数
+	 * COUNT控制插入,查找,删除的次数
+	 * beforeTime,afterTime分别为运算前后的时间，相减即为运算所用时间
+	 */
+	private final static int COUNT1=10000;
+	private final static int COUNT2=100000;
+	private final static int COUNT3=1000000;	
+	private int COUNT=COUNT3;
+	private long beforeTime,afterTime;
+	public static void main(String[] args)
+	{	
+		ArrayList<Integer> list=new ArrayList<Integer>();
+		LinkedList<Integer> list1=new LinkedList<Integer>();
+		Vector<Integer> list2=new Vector<Integer>();	
+		Stack<Integer> list3=new Stack<Integer>();
+		/*List<Integer> list=new ArrayList<>();
+		List<Integer> list1=new LinkedList<>();
+		List<Integer> list2=new Vector<>();*/
+		Test test=new Test();
+		test.insert(list);
+		test.insert(list1);
+		test.insert(list2);
+		test.insert(list3);
+		test.index(list);
+		test.index(list1);
+		test.index(list2);
+		test.index(list3);
+		test.delete(list);
+		test.delete(list1);
+		test.delete(list2);
+		test.delete(list3);
+		
+	}
+	/** 
+	 * @param list 容器变量
+	 * @return 容器名
+	 */
+	private String getName(List<Integer> list)
+	{
+		if(list instanceof ArrayList)
+			return "ArrayList";
+		else if(list instanceof LinkedList)
+			return "LinkedList";
+		else if(list instanceof Stack)
+			return "Stack";
+		else
+			return "Vector";
+	}
+	/** 
+	 * @param list 容器变量
+	 * 计算插入元素所用时间
+	 */
+	private void insert(List<Integer> list)//插入元素
+	{
+		beforeTime=System.currentTimeMillis();			
+		for(Integer i=0;i<COUNT;i++)
+			list.add(0,i);//从头插入元素
+		afterTime=System.currentTimeMillis();
+		System.out.println(getName(list)+"插入时间为"+(afterTime-beforeTime)+"毫秒");		
+	}
+	/** 
+	 * @param list 容器变量
+	 * 计算查找元素所用时间
+	 */
+	private void index(List<Integer> list)//查找元素
+	{
+		beforeTime=System.currentTimeMillis();	
+		for(int i=0;i<COUNT;i++)
+			list.get(i);//从头查找所有元素
+		//list.get((int)(Math.random()*count));
+		afterTime=System.currentTimeMillis();
+		System.out.println(getName(list)+"查找时间为"+(afterTime-beforeTime)+"毫秒");
+	}
+	/** 
+	 * @param list 容器变量
+	 * 计算删除元素所用时间
+	 */
+	private void delete(List<Integer> list)//删除元素
+	{
+		beforeTime=System.currentTimeMillis();
+		for(int i=0;i<COUNT;i++)
+			list.remove(0);//从头删除元素
+		afterTime=System.currentTimeMillis();
+		System.out.println(getName(list)+"删除时间为"+(afterTime-beforeTime)+"毫秒");
+	}
+}
