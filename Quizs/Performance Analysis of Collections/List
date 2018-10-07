@@ -55,8 +55,8 @@ public class Test
 		if(list instanceof ArrayList)
 			return "ArrayList";
 		else if(list instanceof LinkedList)
-			return "LinkedList";
-		else if(list instanceof Stack)
+			return "LinkedList"
+		else if(list instanceof Stack)//Stack与Vector的相对位置不能发改变，instanceof关键字判断某对象是否是某类型实例，Stack继承自Vector ，Stack类的对象是Vector类的实例
 			return "Stack";
 		else
 			return "Vector";
