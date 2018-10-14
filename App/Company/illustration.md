@@ -153,3 +153,6 @@ ___
       )
 ***
 # 数据库存放数据
+![image](https://github.com/thunderstudying/java/blob/master/pictures/Employee%E8%A1%A8%E6%95%B0%E6%8D%AE.png "Employee表数据")
+![image](https://github.com/thunderstudying/java/blob/master/pictures/Manager%E8%A1%A8%E6%95%B0%E6%8D%AE.png "Manager表数据")
+![image](https://github.com/thunderstudying/java/blob/master/pictures/StockHolder%E8%A1%A8%E6%95%B0%E6%8D%AE.png "StockHolder表数据")
