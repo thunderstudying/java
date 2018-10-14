@@ -1,6 +1,8 @@
 ## 目录
 * [运行结果](#运行结果)
 * [解释说明](#解释说明)
+* [建立数据库](#建立数据库)
+* [数据库存放数据](#数据库存放数据)
 ___
 # 运行结果
     *******************公司******************
@@ -128,3 +130,26 @@ ___
 * Main类</br>
 入口函数类
 ***
+# 建立数据库
+      create table Employee
+      (
+         name varchar(20)not null,
+         salary money default 40,
+         birthday date not null,	
+      )
+      create table Manager
+      (
+         name varchar(20)not null,
+         salary money default 40,
+         award money default 50,
+         birthday date not null
+      )
+      create table StockHolder
+      (
+         name varchar(20)not null,
+         salary money default 40,
+         share int default 10,
+         birthday date not null
+      )
+***
+# 数据库存放数据
