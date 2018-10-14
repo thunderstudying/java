@@ -1,5 +1,8 @@
 package com.wq;
-
+/**
+ * @author wq
+ * @date October 14,2018
+ */
 public class StockHolder extends Staff {
 	protected int share=10;//股份
 	private static int allShare=100;//所有股东的股份和为100
