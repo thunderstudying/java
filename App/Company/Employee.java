@@ -1,4 +1,8 @@
 package com.wq;
+/**
+ * @author wq
+ * @date October 14,2018
+ */
 public class Employee extends Staff  {
 	public Employee(String name)//默认薪水40
 	{
