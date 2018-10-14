@@ -1,5 +1,8 @@
 package com.wq;
-
+/**
+ * @author wq
+ * @date October 14,2018
+ */
 public class Manager extends Staff{
 	protected double award=50;//经理奖金默认50
 	protected double totalWages;//经理的总工资，奖金加薪水
