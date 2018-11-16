@@ -4,7 +4,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-
+/**
+ * @author wq
+ * @date 16 Nov,2018
 public class ThreadSafeDemo1 implements Runnable {
 	private List<String> list;
 	public ThreadSafeDemo1(List<String> list)
