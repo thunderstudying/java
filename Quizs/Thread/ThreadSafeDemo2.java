@@ -2,7 +2,10 @@ package thread;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
+/**
+ * @author wq
+ * @date 16 Nov,2018
+ */
 public class ThreadSafeDemo2 implements Runnable {
 	private List<String> list;
 
